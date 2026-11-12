@@ -56,81 +56,20 @@ The dataset also contains individual failure-type columns (`TWF`, `HDF`, `PWF`, 
 # Repository Structure
 
 ```text
-Predictive-Maintenance/
+Predictive_Maintenance/
 │
-├── data/
-│   └── ai4i2020.csv
-│
-├── images/
-│   ├── correlation_heatmap.png
-│   ├── feature_boxplots.png
-│   ├── feature_histograms.png
-│   ├── feature_importance.png
-│   ├── machine_type_distribution.png
-│   ├── model_comparison.png
-│   ├── target_distribution.png
-│   └── xgboost_confusion_matrix.png
-│
-├── Predictive_Maintenance.ipynb
-├── predictive_maintenance_xgboost.pkl
-├── README.md
+├── app.py
+├── xgboost_predictive_maintenance.pkl
 ├── requirements.txt
-└── .gitignore
+├── README_APP.md
+│
+└── .streamlit/
+    └── config.toml
 ```
 
 ---
 
 # Exploratory Data Analysis
-
-## Target Distribution
-
-The dataset is highly imbalanced, with machine failures accounting for only **3.39%** of all observations.
-
-<p align="center">
-<img src="images/target_distribution.png" width="500">
-</p>
-
----
-
-## Machine Type Distribution
-
-Most observations belong to **Low (L)** quality machines, followed by **Medium (M)** and **High (H)** quality machines.
-
-<p align="center">
-<img src="images/machine_type_distribution.png" width="500">
-</p>
-
----
-
-## Feature Distributions
-
-Histograms were used to understand the distribution of the numerical sensor features.
-
-<p align="center">
-<img src="images/feature_histograms.png" width="850">
-</p>
-
----
-
-## Boxplots
-
-Boxplots were used to identify outliers and compare feature distributions.
-
-<p align="center">
-<img src="images/feature_boxplots.png" width="850">
-</p>
-
----
-
-## Correlation Heatmap
-
-A correlation heatmap was generated to analyze relationships between numerical features and machine failure.
-
-<p align="center">
-<img src="images/correlation_heatmap.png" width="650">
-</p>
-
----
 
 # Data Preprocessing
 
@@ -177,12 +116,6 @@ Models were evaluated using:
 
 ---
 
-## Model Comparison
-
-<p align="center">
-<img src="images/model_comparison.png" width="600">
-</p>
-
 ---
 
 # Best Model – XGBoost
@@ -191,13 +124,6 @@ Among all evaluated models, **XGBoost** achieved the best balance between Precis
 
 ---
 
-## Confusion Matrix
-
-<p align="center">
-<img src="images/xgboost_confusion_matrix.png" width="500">
-</p>
-
----
 
 # Feature Importance
 
@@ -210,10 +136,6 @@ The XGBoost model identified the following features as the most influential:
 5. Rotational Speed
 6. Machine Type (Medium)
 7. Machine Type (Low)
-
-<p align="center">
-<img src="images/feature_importance.png" width="600">
-</p>
 
 ---
 
@@ -263,33 +185,6 @@ loaded_model = joblib.load("predictive_maintenance_xgboost.pkl")
 
 ---
 
-# Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/soneesh_07/Predictive-Maintenance.git
-```
-
-Navigate to the project:
-
-```bash
-cd Predictive-Maintenance
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Launch Jupyter Notebook:
-
-```bash
-jupyter notebook
-```
-
----
 
 # Technologies Used
 
@@ -333,5 +228,3 @@ Indian Institute of Technology Kharagpur
 - Data-Driven Engineering
 
 ---
-
-⭐ If you found this project useful, consider giving it a **Star**!
