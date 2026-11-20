@@ -57,7 +57,9 @@ The dataset also contains individual failure-type columns (`TWF`, `HDF`, `PWF`, 
 
 ```text
 Predictive_Maintenance/
-│
+│__Data
+|   └──AI4I 2020 Predictive Maintenanc
+|__xgboost_predictive_maintenance
 ├── app.py
 ├── xgboost_predictive_maintenance.pkl
 ├── requirements.txt
